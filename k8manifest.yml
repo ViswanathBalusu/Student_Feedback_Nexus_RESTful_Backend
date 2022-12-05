@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: swe645hw3backenddeployment
+  labels:
+    app: swe645hw3-backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: swe645hw3-backend
+
+  template:
+    metadata:
+      labels:
+        app: swe645hw3-backend
+        tier: swe645hw3-backend
+    spec:
+      containers:
+        - name: swe645hw3-backend
+          image: ghcr.io/viswanathbalusu/swe645assignment3rest:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              name: swe645hw3-backend
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: swe645hw3backendsvc
+  labels:
+    app: swe645hw3backendsvc
+spec:
+  ports:
+    - port: 31763
+      targetPort: 8080
+  selector:
+    app: swe645hw3-backend
+    tier: swe645hw3-backend
+  type: LoadBalancer
