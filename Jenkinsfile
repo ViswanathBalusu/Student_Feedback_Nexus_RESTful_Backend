@@ -66,7 +66,8 @@ pipeline {
             ]
         )
         setBuildStatus("Changes Pushed to K8s Cluster", "SUCCESS")
-
+        build job:'SWE645_Assignment3_Angular'
+        setBuildStatus("Handing Off the Job to Frontend", "SUCCESS")
       }
     }
 
