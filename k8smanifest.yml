@@ -5,7 +5,6 @@ metadata:
   labels:
     app: swe645hw3-back
 spec:
-  replicas: 3
   selector:
     matchLabels:
       app: swe645hw3-back
