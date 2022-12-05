@@ -3,26 +3,26 @@ kind: Deployment
 metadata:
   name: swe645hw3backenddeployment
   labels:
-    app: swe645hw3-backend
+    app: swe645hw3-back
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: swe645hw3-backend
+      app: swe645hw3-back
 
   template:
     metadata:
       labels:
-        app: swe645hw3-backend
-        tier: swe645hw3-backend
+        app: swe645hw3-back
+        tier: swe645hw3-back
     spec:
       containers:
-        - name: swe645hw3-backend
+        - name: swe645hw3-back
           image: ghcr.io/viswanathbalusu/swe645assignment3rest:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
-              name: swe645hw3-backend
+              name: swe645hw3-back
 
 
 ---
@@ -37,6 +37,6 @@ spec:
     - port: 31763
       targetPort: 8080
   selector:
-    app: swe645hw3-backend
-    tier: swe645hw3-backend
+    app: swe645hw3-back
+    tier: swe645hw3-back
   type: LoadBalancer
