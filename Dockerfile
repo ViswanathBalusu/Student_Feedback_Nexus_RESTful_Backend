@@ -6,9 +6,9 @@ COPY . .
 
 RUN mvn compile war:war
 
-FROM tomcat:jre11
+FROM tomcat:jre17
 
-COPY --from=build_stage /home/assignment3/target/assignment.war \
+COPY --from=build_stage /home/assignment3/target/assignment3-0.0.1-SNAPSHOT \
 						/usr/local/tomcat/webapps/assignment.war
 
 CMD ["catalina.sh", "run"]
