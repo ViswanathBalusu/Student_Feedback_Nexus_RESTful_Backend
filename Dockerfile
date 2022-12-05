@@ -1,3 +1,4 @@
+# Intermediate Build For Building Artifacts
 FROM maven:3.8.6-eclipse-temurin-17-alpine as build_stage
 
 WORKDIR /home/assignment3
