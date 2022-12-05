@@ -1,4 +1,4 @@
-FROM maven:3.8.6-eclipse-temurin-11-alpine as build_stage
+FROM maven:3.8.6-eclipse-temurin-17-alpine as build_stage
 
 WORKDIR /home/assignment3
 
