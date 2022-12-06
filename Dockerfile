@@ -7,7 +7,6 @@ COPY . .
 
 RUN mvn compile war:war
 
-# Final Build Stage
 FROM tomcat:jre17
 
 COPY --from=build_stage /home/assignment3/target/assignment3.war \
