@@ -1,29 +1,10 @@
-# SWE645 - Assignment 3
-
-
-## Teammates
-
-- Chandra Kiran Viswanath Balusu - G01351345
-- Hemanth Kumar Reddy Tiyyagura - G01350509
-- Anusha Bhavanam - G01348764
-- Bharath Chandra Nimmala - G01346154
-- Siva Satyanarayana Raju Pusapati - G01355494
-
-
-## Contributions
-
-- Chandra Kiran Viswanath Balusu - `Developed jenkins pipelines for both frontend and backend, and managed everything required by Jenkins such as Git, kubectl`
-- Hemanth Kumar Reddy Tiyyagura - `Developed the frontend Angular components and provisioned the k8s cluster`
-- Anusha Bhavanam - `Developed angular services and provisioned a VM for the jenkins deployment`
-- Siva Satyanarayana Raju Pusapati - `Wrote the K8s manifest files for the kubernetes frontend and backend deployments` 
-- Bharath Chandra Nimmala - `Provisioned MySQL database in AWS Cloud using RDS service and developed the backend required for the application`
-
+# Student Feedback Nexus
 ## Prerequisites and Tools
 
 ### Installing Node.js on Ubuntu:
 
 ```
-	curl -sL https://deb.nodesource.com/setup_14.x | bash && \
+    curl -sL https://deb.nodesource.com/setup_14.x | bash && \
     #Node JS and NPM
     apt-get install -y nodejs && \
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
@@ -128,15 +109,9 @@
   - ![GCP](./screenshots/pic2_1.png)
 
 ## Github Repository
-- [Frontend](https://github.com/ViswanathBalusu/SWE645_Frontend_Angular) - Private Repository
-- [Backend](https://github.com/ViswanathBalusu/SWE645_Assignment_RESTAPI) - Private Repository
+- [Frontend](https://github.com/ViswanathBalusu/Student_Feedback_Nexus_Frontend)
+- [Backend](https://github.com/ViswanathBalusu/Student_Feedback_Nexus_RESTful_Backend) 
 
 ## Video Demonstration
 - [Youtube](https://youtu.be/edvH8vE0H4Y)
 
-## AWS EC2 of Part 1
-- [AWS S3 URL](http://ckvbalusu-swe645-ass1-part1.s3-website-us-east-1.amazonaws.com/)
-
-## K8s Load Balancer URL
-- [Frontend](http://34.148.220.176:31762/)
-- [Backend](http://35.237.164.215:31763/assignment3/)
